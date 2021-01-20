@@ -1,5 +1,5 @@
 {
-  "name": "pathfinding",
+  "name": "@icepanel/pathfinding",
   "version": "0.4.18",
   "description": "Comprehensive pathfinding library for grid based games",
   "homepage": "https://github.com/qiao/PathFinding.js",
@@ -16,6 +16,13 @@
   "author": "Xueqiao Xu <xueqiaoxu@gmail.com>",
   "main": "./index.js",
   "types": "./types.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IcePanel/PathFinding.js.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "heap": "0.2.5"
   },
@@ -39,10 +46,6 @@
   },
   "scripts": {
     "test": "gulp test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/qiao/PathFinding.js.git"
   },
   "licenses": [
     {

@@ -4,7 +4,7 @@
 //                 Hartley Robertson <https://github.com/hartleyrobertson>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module "pathfinding" {
+declare module "@icepanel/pathfinding" {
     namespace Pathfinding {
         export namespace Heuristic {
             function manhattan(dx: number, dy: number): number;
@@ -38,6 +38,8 @@ declare module "pathfinding" {
 
         interface FinderOptions extends Heuristic {
             diagonalMovement?: DiagonalMovement;
+            avoidStaircase?: boolean;
+            turnPenalty?: number;
             weight?: number;
         }
 
@@ -70,6 +72,8 @@ declare module "pathfinding" {
             getNeighbors(node: Pathfinding.Node, diagonalMovement: DiagonalMovement): Pathfinding.Node[];
             isWalkableAt(x: number, y: number): boolean;
             isInside(x: number, y: number): boolean;
+            getWeightAt(x: number, y: number): number;
+            setWeightAt(x: number, y: number, weight: number): void;
 
             width: number;
             height: number;
